@@ -1,51 +1,186 @@
-function App()
+import React from "react";
+class App extends React.Component
 {
-  var arr=[11,22,33,44,105,100]
-  var sum=0
-  var max=arr[0]
-  return(
-    <>
-    <h1>React Loop map method</h1>
-    <h2>Old model map</h2>
-    {arr[0]}
-    {arr[1]}
-    {arr[2]}
-    {arr[3]}
-    {arr[4]}
-    {arr[5]}
+  constructor(props)
+  {
+    var ans=""
+    super(props)
+    for(var s in props.data)
+    {
+      ans=ans+s+ "="+props.data[s]
+      console.log(s)
+    }
+    this.state={
+      res:ans
 
-    <h1>New Model map (loop) using br tag</h1>
-    {arr.map((v)=><>
-    {v}<br></br>
-    </>)}
-
-    <h1>New Model map (loop) using list tag</h1>
-    <ol type="I">
-    {arr.map((v)=><li>{v}</li>)}
-    </ol>
-
-    <h1>Task: Sum of Array</h1>
-    <div style={{display:"none"}}>
-    {arr.map((item)=><>
-    {sum=sum+item}
-    </>)}
-    </div>
-    <h3>sum of Array:{sum}</h3>
-
-    <h1>Task:Max of an Array</h1>
-    <div style={{display:"none"}}>
-      {arr.map((i)=><>
-        {max<i && <>{max=i}</>}
-        
-      </>)}
-    </div>
-    <h3>Max of an Array:{max}</h3>
-
-
-    </>
-  )
+      // studentrollno:this.props.data.rno,
+      // studentname:this.props.data.sname,
+      // studentmark:this.props.data.mark,
+      // studentrank:this.props.data.rank,
+      // studentgrade:this.props.data.grade,
+      // studentlocation:this.props.data.location,
+      // studentsingle:this.props.data.issingle
+    }
+  }
+  render()
+  {
+    return(
+      <>
+      <h1>Combine React state + props</h1>
+      {this.state.res}
+      
+      {/* <h1>Combine React state + props</h1>
+      <h2>Student Roll no: {this.state.studentrollno}</h2>
+      <h2>Student Name: {this.state.studentname}</h2>
+      <h2>student Mark: {this.state.studentmark}</h2>
+      <h2>student Rank: {this.state.studentrank}</h2>
+      <h2>student Grade: {this.state.studentgrade}</h2>
+      <h2>student Location: {this.state.studentlocation}</h2>
+      <h2>student single: {this.state.studentsingle?"yes":"no"}</h2> */}
+      </>
+    )
+  }
 }
 export default App
+
+
+
+// import React from "react";
+// class App extends React.Component
+// {
+//   constructor()
+//   {
+//     super()
+//     this.state={
+//       sno:101,
+//       sname:"Rohith",
+//       marks:[99,45,55,66,88]
+//     }
+
+//   }
+//   show=()=>{
+//     this.setState({sname:"Rohith A"})
+//   }
+//   disp=()=>{
+//     this.setState({marks:[95,99,78,97,100]})
+//   }
+//   disp1=()=>{
+//     const newmark=[...this.state.marks]
+//     newmark[2]=88
+//     this.setState({marks:newmark})
+//   }
+//   render()
+//   {
+//     return(
+//       <>
+//       <h1>This is a class Component</h1>
+//       <h2>Serial Number:{this.state.sno}</h2>
+//       <h2>Student Name:{this.state.sname}</h2>
+//       <h2>Mark:{this.state.marks}</h2>
+//       <h2>{this.state.marks.map((v,index)=><>Mark {index+1}= {v}<br></br></>)}</h2>
+//       <button onClick={this.show}>Update name</button>
+//       <button onClick={this.disp}>Update All Marks</button>
+//       <button onClick={this.disp1}>Update single Mark</button>
+//       </>
+//     )
+//   }
+// }
+// export default App
+
+
+
+// import { aadhar, accno, name, place } from "./Components/commonvar"
+// import Import from "./Components/Import"
+
+// function App(){
+//   return(
+//     <>
+//     <Import/>
+//     <h1>This is default component</h1>
+//     <h1>Name:{name}</h1>
+//     <h1>Place:{place}</h1>
+//     <h1>AAdhar No:{aadhar}</h1>
+//     <h1>Account No:{accno}</h1>
+//     </>
+//   )
+// }
+// export default App
+
+
+
+
+
+// function App()
+// {
+//   var arr=[11,22,33,44,100,105,55,66]
+//   var sum=0
+//   var max=arr[0]
+//   var order=arr
+//   var fans=""
+//   return(
+//     <>
+//     <h1>React Loop map method</h1>
+//     <h2>Old model map</h2>
+//     {arr[0]}
+//     {arr[1]}
+//     {arr[2]}
+//     {arr[3]}
+//     {arr[4]}
+//     {arr[5]}
+
+//     <h1>New Model map (loop) using br tag</h1>
+//     {arr.map((v)=><>
+//     {v}<br></br>
+//     </>)}
+
+//     <h1>New Model map (loop) using list tag</h1>
+//     <ol type="I">
+//     {arr.map((v)=><li>{v}</li>)}
+//     </ol>
+
+//     <h1>Task: Sum of Array</h1>
+//     <div style={{display:"none"}}>
+//     {arr.map((item)=><>
+//     {sum=sum+item}
+//     </>)}
+//     </div>
+//     <h3>sum of Array: {sum}</h3>
+
+//     <h1>Task:Max of an Array</h1>
+//     <div style={{display:"none"}}>
+//       {arr.map((i)=><>
+//         {max<i && <>{max=i}</>}
+        
+//       </>)}
+//     </div>
+//     <h3>Max of an Array: {max}</h3>
+
+//     <h1>Ascending Order</h1>
+//     <div style={{display:"none"}}>{order.sort((x,y)=>(x-y))}</div>
+//     {order.map((item)=><>{item} </>)}
+
+//     <h1>Descending Order</h1>
+//     <div style={{display:"none"}}>{order.sort((x,y)=>(y-x))}</div>
+//     {order.map((item)=><>{item} </>)}
+    
+//     <h1>Adding Element in an Array</h1>
+//     <div style={{display:"none"}}>{order.push(989)}</div>
+//     {order.map((item)=><>{item} </>)}
+
+//     <h1>Remove Last Element in an Array</h1>
+//     <div style={{display:"none"}}>{order.pop()}</div>
+//     <div style={{display:"none"}}>{order.pop()}</div>
+//     <div style={{display:"none"}}>{order.pop()}</div>
+//     {order.map((item)=><>{item} </>)}
+
+//     <h1>Remove last comma or plus or any char</h1>
+//     <div style={{display:"none"}}>
+//     {order.map((item)=><>{fans=fans+item+","} </>)}</div>
+//     {fans.slice(0,-1)}
+//     </>
+//   )
+// }
+// export default App
 
 
 
