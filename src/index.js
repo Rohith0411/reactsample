@@ -7,12 +7,17 @@ import reportWebVitals from './reportWebVitals';
 var sobj={
   rno:222,
   sname:"Rohith",
-  mark:98,
+  mark:[98,88,78,55],
   rank:2,
   grade:"Outstanding",
   location:"karur",
   issingle:true,
-  aadhar:1234567890
+  aadhar:1234567890,
+  hobbies:{
+    hob1:"studying",
+    hob2:"web developer",
+    hob3:"gaming"
+  }
 
 }
 

@@ -1,47 +1,95 @@
-import React from "react";
-class App extends React.Component
+function App(props)
 {
-  constructor(props)
-  {
-    var ans=""
-    super(props)
-    for(var s in props.data)
-    {
-      ans=ans+s+ "="+props.data[s]
-      console.log(s)
-    }
-    this.state={
-      res:ans
-
-      // studentrollno:this.props.data.rno,
-      // studentname:this.props.data.sname,
-      // studentmark:this.props.data.mark,
-      // studentrank:this.props.data.rank,
-      // studentgrade:this.props.data.grade,
-      // studentlocation:this.props.data.location,
-      // studentsingle:this.props.data.issingle
-    }
-  }
-  render()
-  {
-    return(
-      <>
-      <h1>Combine React state + props</h1>
-      {this.state.res}
-      
-      {/* <h1>Combine React state + props</h1>
-      <h2>Student Roll no: {this.state.studentrollno}</h2>
-      <h2>Student Name: {this.state.studentname}</h2>
-      <h2>student Mark: {this.state.studentmark}</h2>
-      <h2>student Rank: {this.state.studentrank}</h2>
-      <h2>student Grade: {this.state.studentgrade}</h2>
-      <h2>student Location: {this.state.studentlocation}</h2>
-      <h2>student single: {this.state.studentsingle?"yes":"no"}</h2> */}
-      </>
-    )
-  }
+  var a=props.data.rno
+  var b=props.data.sname
+  var c=props.data.issingle
+  var d=props.data.mark
+  var e=props.data.hobbies
+  var f=props.data
+  return(
+    <>
+    <h3>Type of rno:{typeof(a)}</h3>
+    <h3>Type of sname:{typeof(b)}</h3>
+    <h3>Type of married satus:{typeof(c)}</h3>
+    <h3>Type of mark:{typeof(d)}</h3>
+    <h3>{Array.isArray(d)?"it is Array":"It is Object"}</h3>
+    <h3>{Array.isArray(e)?"it is Array":"It is Object"}</h3>
+    
+    </>
+  )
 }
 export default App
+
+
+
+//Props in Functional Component
+
+// import parse from 'html-react-parser';
+// function App(props)
+// {
+//   var ans=""
+//   for(var s in props.data)
+//      {
+//        ans=ans+`<li>${s} = ${props.data[s]}</li>`
+//        console.log(s)
+//      }
+//   return(
+//     <>
+//       {parse("<ol>"+ans+"</ol>")}
+//     </>
+//   )
+// }
+// export default App
+
+
+//Props in Class Component
+
+// import React from "react";
+// import parse from "html-react-parser";
+// class App extends React.Component
+// {
+//   constructor(props)
+//   {
+//     var ans=""
+//     super(props)
+//     for(var s in props.data)
+//     {
+//       ans=ans+`<li>${s} = ${props.data[s]}</li>`
+//       console.log(s)
+//     }
+//     var h="<ol type=I>"
+//     this.state={
+//       res:h+ans
+//       // studentrollno:this.props.data.rno,
+//       // studentname:this.props.data.sname,
+//       // studentmark:this.props.data.mark,
+//       // studentrank:this.props.data.rank,
+//       // studentgrade:this.props.data.grade,
+//       // studentlocation:this.props.data.location,
+//       // studentsingle:this.props.data.issingle
+//     }
+//   }
+//   render()
+//   {
+//     return(
+//       <>
+//       <h1>Combine React state + props</h1>
+//       {parse(this.state.res)}
+//       <div id="res"></div>
+      
+//       {/* <h1>Combine React state + props</h1>
+//       <h2>Student Roll no: {this.state.studentrollno}</h2>
+//       <h2>Student Name: {this.state.studentname}</h2>
+//       <h2>student Mark: {this.state.studentmark}</h2>
+//       <h2>student Rank: {this.state.studentrank}</h2>
+//       <h2>student Grade: {this.state.studentgrade}</h2>
+//       <h2>student Location: {this.state.studentlocation}</h2>
+//       <h2>student single: {this.state.studentsingle?"yes":"no"}</h2> */}
+//       </>
+//     )
+//   }
+// }
+// export default App
 
 
 
