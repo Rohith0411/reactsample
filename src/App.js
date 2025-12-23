@@ -1,24 +1,74 @@
-function App(props)
-{
-  var a=props.data.rno
-  var b=props.data.sname
-  var c=props.data.issingle
-  var d=props.data.mark
-  var e=props.data.hobbies
-  var f=props.data
-  return(
-    <>
-    <h3>Type of rno:{typeof(a)}</h3>
-    <h3>Type of sname:{typeof(b)}</h3>
-    <h3>Type of married satus:{typeof(c)}</h3>
-    <h3>Type of mark:{typeof(d)}</h3>
-    <h3>{Array.isArray(d)?"it is Array":"It is Object"}</h3>
-    <h3>{Array.isArray(e)?"it is Array":"It is Object"}</h3>
-    
-    </>
+import React from 'react'
+
+const App = () => {
+  return (
+    <div>
+      <form>
+       <input type='text' placeholder='Enter UserName:'></input><br></br>
+       <input type='password' placeholder='Enter Password:'></input><br></br>
+       <input type='number' placeholder='Enter Accno:'></input><br></br>
+       <input type='email' placeholder='Enter EmailId:'></input><br></br>
+       <label>Select Gender</label><br></br>
+       <input type='radio' name='gender'></input>Male
+       <input type='radio' name='gender'></input>Female
+       <input type='radio' name='gender'></input>others<br></br>
+       <label>Select Course</label><br></br>
+       <input type='checkbox' name='cs'></input>C
+       <input type='checkbox' name='cs'></input>Java
+       <input type='checkbox' name='cs'></input>Web development
+       <input type='checkbox' name='cs'></input>Python
+       <input type='checkbox' name='cs'></input>None of these<br></br>
+       <select>
+        <option selected>Select Month</option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+       </select><br></br>
+       Select Colour:<input type='color' name='col'></input><br></br>
+       Select DOB:<input type='date' name='dob'></input><br></br>
+       select Time:<input type='time' name='time'></input><br></br>
+       Select Week:<input type='week' name='week'></input><br></br>
+       <button><b>Click Me</b></button>
+       <input type='submit'></input>
+      </form>
+    </div>
   )
 }
+
 export default App
+
+
+
+// function App(props)
+// {
+//   var a=props.data.rno
+//   var b=props.data.sname
+//   var c=props.data.issingle
+//   var d=props.data.mark
+//   var e=props.data.hobbies
+//   var f=props.data
+//   return(
+//     <>
+//     <h3>Type of rno:{typeof(a)}</h3>
+//     <h3>Type of sname:{typeof(b)}</h3>
+//     <h3>Type of married satus:{typeof(c)}</h3>
+//     <h3>Type of mark:{typeof(d)}</h3>
+//     <h3>{Array.isArray(d)?"It is Array":"It is Object"}</h3>
+//     <h3>{Array.isArray(e)?"it is Array":"It is Object"}</h3>
+    
+//     </>
+//   )
+// }
+// export default App
 
 
 
