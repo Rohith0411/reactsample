@@ -1,50 +1,183 @@
-import React from 'react'
+import "./App.css";
+import myimg from './images/key1.png'
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <form>
-       <input type='text' placeholder='Enter UserName:'></input><br></br>
-       <input type='password' placeholder='Enter Password:'></input><br></br>
-       <input type='number' placeholder='Enter Accno:'></input><br></br>
-       <input type='email' placeholder='Enter EmailId:'></input><br></br>
-       <label>Select Gender</label><br></br>
-       <input type='radio' name='gender'></input>Male
-       <input type='radio' name='gender'></input>Female
-       <input type='radio' name='gender'></input>others<br></br>
-       <label>Select Course</label><br></br>
-       <input type='checkbox' name='cs'></input>C
-       <input type='checkbox' name='cs'></input>Java
-       <input type='checkbox' name='cs'></input>Web development
-       <input type='checkbox' name='cs'></input>Python
-       <input type='checkbox' name='cs'></input>None of these<br></br>
-       <select>
-        <option selected>Select Month</option>
-        <option>January</option>
-        <option>February</option>
-        <option>March</option>
-        <option>April</option>
-        <option>May</option>
-        <option>June</option>
-        <option>July</option>
-        <option>August</option>
-        <option>September</option>
-        <option>October</option>
-        <option>November</option>
-        <option>December</option>
-       </select><br></br>
-       Select Colour:<input type='color' name='col'></input><br></br>
-       Select DOB:<input type='date' name='dob'></input><br></br>
-       select Time:<input type='time' name='time'></input><br></br>
-       Select Week:<input type='week' name='week'></input><br></br>
-       <button><b>Click Me</b></button>
-       <input type='submit'></input>
-      </form>
+    <div className="container">
+      <div className="admin-card">
+        <img src={myimg} width='50px'></img>
+        <h2>ADMIN PANEL</h2>
+        
+        <input type="text" placeholder="Username" ></input>
+        <input type="password" placeholder="Password" ></input>
+
+        <button>LOGIN</button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
+
+
+
+
+
+
+// import React, { useEffect, useState } from 'react'
+
+// function App() {
+//   const [name,setName]=useState("vera Polappu illa")
+//   useEffect(()=>
+//   {
+//     document.title=`Summa ${name}`
+//   })
+//   const dis=()=>{
+//     setTimeout(()=>{
+//       setName("Waste of Time")
+//     },1000)
+//   }
+//   const dis1=()=>{
+//     setName("Oru Projanamu illa")
+//   }
+//   return (
+//     <div>
+//       <h1>UseEffect Hook</h1>
+//       <button onClick={dis}>Change name</button>
+//       <button onClick={dis1}>Next</button>
+//       <div>
+//         {name}
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// import { useState } from "react"
+
+// function App(){
+//   const [num,setNum] = useState(0)
+//   return(
+//     <>
+//     <button onClick={()=>setNum(num+1)}>Clicked: {num} times</button>
+//     </>
+//   )
+// }
+// export default App
+
+
+
+// import React, { useState } from "react";
+// import "./App.css";
+
+// function App() {
+//   const [count, setCount] = useState(100);
+
+//   return (
+//     <div className="container">
+//       <div className="card">
+//         <h2>Counter App</h2>
+
+//         <div className="buttons">
+//           <button onClick={() => setCount(count + 1)}>Increment</button>
+//           <button onClick={() => setCount(count - 1)}>Decrement</button>
+//         </div>
+
+//         <div className="circle">
+//           {count}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+
+
+
+// import React, { useState } from 'react'
+// const App = () => {
+
+//   const [name,setName]=useState("Typing..")
+
+//   const show=(event)=>{
+//     setName(event.target.value)
+//   }
+
+//   const dis=(v)=>{
+//     console.log(v)
+//   }
+//   const find=(v1,v2)=>{
+//     console.log(v1+v2)
+//   }
+//   return (
+//     <div>
+//       <form>
+//        <input type='text' value={name} onChange={show} placeholder='Enter UserName:'></input><br></br>
+//        {/* Argument passing Method */}
+//        <input type='password' onChange={()=>dis(12345)} placeholder='Enter Password:'></input><br></br> 
+//        <input type='number' onChange={()=>find(2,4)} placeholder='Enter Accno:'></input><br></br>
+//        <input type='email' placeholder='Enter EmailId:'></input><br></br>
+//        <label>Select Gender</label><br></br>
+//        <input type='radio' name='gender'></input>Male
+//        <input type='radio' name='gender'></input>Female
+//        <input type='radio' name='gender'></input>others<br></br>
+//        <label>Select Course</label><br></br>
+//        <input type='checkbox' name='cs'></input>C
+//        <input type='checkbox' name='cs'></input>Java
+//        <input type='checkbox' name='cs'></input>Web development
+//        <input type='checkbox' name='cs'></input>Python
+//        <input type='checkbox' name='cs'></input>None of these<br></br>
+//        <select>
+//         <option selected>Select Month</option>
+//         <option>January</option>
+//         <option>February</option>
+//         <option>March</option>
+//         <option>April</option>
+//         <option>May</option>
+//         <option>June</option>
+//         <option>July</option>
+//         <option>August</option>
+//         <option>September</option>
+//         <option>October</option>
+//         <option>November</option>
+//         <option>December</option>
+//        </select><br></br>
+//        Select Colour:<input type='color' name='col'></input><br></br>
+//        Select DOB:<input type='date' name='dob'></input><br></br>
+//        select Time:<input type='time' name='time'></input><br></br>
+//        Select Week:<input type='week' name='week'></input><br></br>
+//        Upload Resume:<input type='file' name='file'></input><br></br>
+//        <label>Type Your Address:</label><br></br>
+//        <textarea rows='7'cols='25'></textarea><br></br>
+//        <label>List Box</label><br></br>
+//        <select size='4'multiple>
+//         <option>Sunday</option>
+//         <option>Monday</option>
+//         <option>Tuseday</option>
+//         <option>Wednesday</option>
+//         <option>Thursday</option>
+//         <option>Friday</option>
+//         <option>Saturday</option>
+//        </select><br></br>
+//        <label>Copying 70% Complete: </label>
+//        <progress  style={{border:'3px solid blue'}} min='0' max='100' value='70'></progress><br></br>
+//        <label>Volume: 😈😈😈😎😉</label><br></br>
+//        <input type='range' min='0' max='100' value='70'></input><br></br>
+//        <button><b>Click Me</b></button>
+//        <input type='submit'></input>
+//       </form>
+//     </div>
+//   )
+// }
+
+// export default App
 
 
 
