@@ -1,23 +1,134 @@
-import "./App.css";
-import myimg from './images/key1.png'
 
-function App() {
-  return (
-    <div className="container">
-      <div className="admin-card">
-        <img src={myimg} width='50px'></img>
-        <h2>ADMIN PANEL</h2>
+
+
+
+
+// import React, { useState } from 'react'
+
+// function App() 
+// {
+
+//   const[city,setCity]=useState("Karur")
+//   const[list,setList]=useState("null")
+//   const upcity=(event)=>{
+//     setCity(event.target.value)
+//   }
+//   const findweather=()=>{
+//     console.log("City Name:",city)
+//     var api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=51842389ef8c6ec1e5c785205ce833cf`
+    
+//     fetch(api)
+//         .then((response)=>response.json())
+//         .then((data)=>{
+//           console.log(data)
+//           setList(data)
+
+//         })
         
-        <input type="text" placeholder="Username" ></input>
-        <input type="password" placeholder="Password" ></input>
+//         .catch((err)=>{
+//           console.log(""+err)
+//           setList(err)
+//         })
+//       }
+//   return (
+//     <div>
+//       <h2><center>Fetch-API</center></h2>
+//       <h2>Weather Report</h2>
+//       <label>Enter City Name</label>
+//       <input type='text' value={city} onChange={upcity}></input><br></br>
+//       <input type='button' onClick={findweather} value='GetReport'></input><br></br>
+//       {list.cod===200 &&
+//       <>
+//       <h2>Final Report</h2>
+//       <h3>Main Report:{list !==null && list.weather[0].main}</h3>
+//       <h3>Description:{list !==null && list.weather[0].description}</h3>
+//       <h3>Wind Speed:{list !==null && list.wind.speed}</h3>
+//       <h3>Temperature:{list !==null && list.main.temp}</h3>
+//       <h3>Humidity:{list !==null && list.main.humidity}</h3>
+//       </>
+//       }
 
-        <button>LOGIN</button>
-      </div>
-    </div>
-  );
-}
+//       {list.cod==="404" &&
+//       <h3>Error Message:{list !==null && list.cod==='404' && list.message}</h3>
+//       }
+//     </div>
+//   )
+// }
 
-export default App;
+// export default App
+
+
+
+
+// import React from 'react'
+// import './App.css'
+// import myimg from './images/Luffy-PNG-Cutout.png'
+
+// function App() {
+//   return (
+//     <div className="container">
+//       <div className="card">
+//         <div className="image-box">
+//           <img src={myimg} alt="boy" />
+//         </div>
+
+//         <form>
+//           <div id="form">
+//             <marquee><h2>ENTER YOUR DETAILS IN THIS FORM</h2></marquee>
+
+//             <label>Name:</label><br />
+//             <input type="text" placeholder="Enter Name" /><br />
+
+//             <label>Email ID:</label><br />
+//             <input type="email" placeholder="Enter Email ID" /><br />
+
+//             <label>Password:</label><br />
+//             <input type="password" placeholder="Enter Password" /><br />
+
+//             <label>Select Gender:</label><br />
+//             <input type="radio" name="gender" /> Male
+//             <input type="radio" name="gender" /> Female
+//             <input type="radio" name="gender" /> Others<br />
+
+//             <label>Type Your Address:</label><br />
+//             <textarea rows="7" cols="25"></textarea><br />
+
+//             <label>Phone Number:</label><br />
+//             <input type="tel" placeholder="Enter Mobile Number" /><br />
+
+//             <button>Submit</button>
+//           </div>
+//         </form>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+// import "./App.css";
+// import myimg from './images/key1.png'
+
+// function App() {
+//   return (
+//     <div className="container">
+//       <div className="admin-card">
+//         <img src={myimg} width='50px'></img>
+//         <h2>ADMIN PANEL</h2>
+        
+//         <input type="text" placeholder="Username" ></input>
+//         <input type="password" placeholder="Password" ></input>
+
+//         <button>LOGIN</button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
 
 
 
@@ -94,7 +205,7 @@ export default App;
 //   );
 // }
 
-// export default App;
+// export default App
 
 
 
